@@ -17,5 +17,5 @@ We'll try this out for this research presentation and see if this is useful to o
 
 * Mutational fuzzers - mutate promising old seeds into new seeds each iteration
 * Generational fuzzers - generate new seeds each iteration, usually ignoring prior seeds
-* Coverage-based fuzzers - define ‘interesting’ as an increase in fuzzers
+* Coverage-based fuzzers - define ‘interesting’ as an increase in code coverage
 * Directed fuzzers - define ‘interesting’ as proximity to a desired point in the target program
