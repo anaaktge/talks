@@ -15,7 +15,7 @@ We'll try this out for this research presentation and see if this is useful to o
 * Seed corpus - set of seeds in a context. For example, the seed corpus of the nth iteration or the overall seed corpus of the run.
 * Initial seed corpus, initial corpus - seed corpus of the initial iteration. May be optional and/or supplied by the user.
 
-* Mutational fuzzers - mutate promising old seeds into new seeds each iteration (AFL)
-* Generational fuzzers - generate new seeds each iteration, usually ignoring prior seeds (Skyfire)
-* Coverage-based fuzzers - define ‘interesting’ as an increase in fuzzers (AFL)
-* Directed fuzzers - define ‘interesting’ as proximity to a desired point in the target program (AFLGo)
+* Mutational fuzzers - mutate promising old seeds into new seeds each iteration
+* Generational fuzzers - generate new seeds each iteration, usually ignoring prior seeds
+* Coverage-based fuzzers - define ‘interesting’ as an increase in fuzzers
+* Directed fuzzers - define ‘interesting’ as proximity to a desired point in the target program
