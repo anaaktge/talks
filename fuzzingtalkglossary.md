@@ -8,7 +8,7 @@ Fuzzing, also called Fuzz Testing, is a stochastic, dynamic software-testing tec
 
 ### Programs Involved
 * Target program - program undergoing fuzz testing. Sometimes called the victim program.
-* Driver - optional glue/translator program between the fuzzer and target program. Does not 'belong' to either the fuzzer or the target. There is an art to these.
+* Driver - optional glue/translator program between the fuzzer and target program. Does not 'belong' to either the fuzzer or the target. Also called a harness. There is an art to these.
 * Fuzzer - program (may be several combined) responsible for fuzzing the target program.
 
 ### Repetitions
@@ -17,16 +17,18 @@ Fuzzing, also called Fuzz Testing, is a stochastic, dynamic software-testing tec
 * Campaign - a series of identical fuzzing runs
 
 ### Inputs to Target Programs
-* Seed - input to the target program
+* Seed - input to the target program. Often a file
 * Seed corpus - set of seeds in a context. For example, the seed corpus of the nth iteration or the overall seed corpus of the run.
 * Initial seed corpus, initial corpus - seed corpus of the initial iteration. May be optional and is usually supplied by the user before the fuzzer starts.
 
 ### Fuzzing Taxnomy: What's this one do again? 
 #### Where Seeds Originate 
+* Not mutually exclusive. Some algorithms use a bit of everything.
 * Mutational fuzzers - mutate promising old seeds from previous interation into new seeds for each new iteration.
-* Generational fuzzers - generate new seeds each iteration, usually ignoring prior seeds.
+* Generational fuzzers - generate new seeds each iteration, usually ignoring prior seeds. Grammar and protocol fuzzers often have generational components. 
 * Naive, classic, random fuzzers - new seeds are pulled from random number generators, or dev/random. May be viewed as not having a seed corpus. 
 
 #### Defining Interesting Behavior 
 * Coverage-based fuzzers - define ‘interesting’ as an increase in code coverage, the amount of code exercised as measured by instrumented code points.
 * Directed fuzzers - define ‘interesting’ as proximity to a desired point in the target program.
+* Naive, classic, random fuzzers - use a source of randomness, such as a random number generator, to produce new values. 
